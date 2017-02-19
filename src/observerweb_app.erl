@@ -44,7 +44,7 @@ start(_StartType, _StartArgs) ->
       {"/info", observerweb_handler, []}
     ]}
   ]),
-  {ok, _} = cowboy:start_http(http, 100, [{port, 8080}], [
+  {ok, _} = cowboy:start_http(http, 100, [{port, 18000}], [
     {env, [{dispatch, Dispatch}]}
   ]),
   dets:open_file(observer_table, [{type, set}, {file, "observer_table"}]),
